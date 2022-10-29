@@ -9,21 +9,43 @@
 /* Begin PBXBuildFile section */
 		1B1076FA290D175700E19C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1076F9290D175700E19C6A /* AppDelegate.swift */; };
 		1B1076FC290D175700E19C6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1076FB290D175700E19C6A /* SceneDelegate.swift */; };
-		1B1076FE290D175700E19C6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1076FD290D175700E19C6A /* ViewController.swift */; };
+		1B1076FE290D175700E19C6A /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1076FD290D175700E19C6A /* MainScreenView.swift */; };
 		1B107701290D175700E19C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B1076FF290D175700E19C6A /* Main.storyboard */; };
 		1B107703290D175900E19C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B107702290D175900E19C6A /* Assets.xcassets */; };
 		1B107706290D175900E19C6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B107704290D175900E19C6A /* LaunchScreen.storyboard */; };
+		1B107714290D187300E19C6A /* MainScreenModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B107713290D187300E19C6A /* MainScreenModuleBuilder.swift */; };
+		1B107716290D18B900E19C6A /* NavigationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B107715290D18B900E19C6A /* NavigationBuilder.swift */; };
+		1B107718290D19A100E19C6A /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B107717290D19A100E19C6A /* MainScreenInteractor.swift */; };
+		1B10771A290D1AC000E19C6A /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B107719290D1AC000E19C6A /* MainScreenRouter.swift */; };
+		1B10771C290D1B3300E19C6A /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B10771B290D1B3300E19C6A /* MainScreenPresenter.swift */; };
+		1B10771E290D209A00E19C6A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B10771D290D209A00E19C6A /* DataModel.swift */; };
+		1B21137D290D3C4A00C1977D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21137C290D3C4A00C1977D /* NetworkService.swift */; };
+		1B21137F290D55F800C1977D /* MainScreenView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21137E290D55F800C1977D /* MainScreenView + Extensions.swift */; };
+		1B211381290D590100C1977D /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B211380290D590100C1977D /* EmployeeCell.swift */; };
+		1B211383290D594100C1977D /* MainScreenView + SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B211382290D594100C1977D /* MainScreenView + SetupUI.swift */; };
+		1B211385290D6DBC00C1977D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B211384290D6DBC00C1977D /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B1076F6290D175700E19C6A /* avito-test-task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "avito-test-task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B1076F9290D175700E19C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B1076FB290D175700E19C6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1B1076FD290D175700E19C6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1B1076FD290D175700E19C6A /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		1B107700290D175700E19C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B107702290D175900E19C6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B107705290D175900E19C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B107707290D175900E19C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B107713290D187300E19C6A /* MainScreenModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModuleBuilder.swift; sourceTree = "<group>"; };
+		1B107715290D18B900E19C6A /* NavigationBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBuilder.swift; sourceTree = "<group>"; };
+		1B107717290D19A100E19C6A /* MainScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
+		1B107719290D1AC000E19C6A /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
+		1B10771B290D1B3300E19C6A /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
+		1B10771D290D209A00E19C6A /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		1B21137C290D3C4A00C1977D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1B21137E290D55F800C1977D /* MainScreenView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreenView + Extensions.swift"; sourceTree = "<group>"; };
+		1B211380290D590100C1977D /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
+		1B211382290D594100C1977D /* MainScreenView + SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreenView + SetupUI.swift"; sourceTree = "<group>"; };
+		1B211384290D6DBC00C1977D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +78,82 @@
 		1B1076F8290D175700E19C6A /* avito-test-task */ = {
 			isa = PBXGroup;
 			children = (
+				1B10770D290D182200E19C6A /* MainScreenModule */,
 				1B1076F9290D175700E19C6A /* AppDelegate.swift */,
 				1B1076FB290D175700E19C6A /* SceneDelegate.swift */,
-				1B1076FD290D175700E19C6A /* ViewController.swift */,
+				1B107715290D18B900E19C6A /* NavigationBuilder.swift */,
 				1B1076FF290D175700E19C6A /* Main.storyboard */,
 				1B107702290D175900E19C6A /* Assets.xcassets */,
 				1B107704290D175900E19C6A /* LaunchScreen.storyboard */,
 				1B107707290D175900E19C6A /* Info.plist */,
 			);
 			path = "avito-test-task";
+			sourceTree = "<group>";
+		};
+		1B10770D290D182200E19C6A /* MainScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				1B107712290D185100E19C6A /* View */,
+				1B107711290D184900E19C6A /* Interactor */,
+				1B107710290D184000E19C6A /* Presenter */,
+				1B10770F290D183500E19C6A /* Entity */,
+				1B10770E290D182B00E19C6A /* Router */,
+				1B107713290D187300E19C6A /* MainScreenModuleBuilder.swift */,
+			);
+			path = MainScreenModule;
+			sourceTree = "<group>";
+		};
+		1B10770E290D182B00E19C6A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1B107719290D1AC000E19C6A /* MainScreenRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1B10770F290D183500E19C6A /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1B10771D290D209A00E19C6A /* DataModel.swift */,
+				1B211384290D6DBC00C1977D /* NetworkError.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		1B107710290D184000E19C6A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1B10771B290D1B3300E19C6A /* MainScreenPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1B107711290D184900E19C6A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1B21137B290D3C3300C1977D /* NetworkService */,
+				1B107717290D19A100E19C6A /* MainScreenInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1B107712290D185100E19C6A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B1076FD290D175700E19C6A /* MainScreenView.swift */,
+				1B211382290D594100C1977D /* MainScreenView + SetupUI.swift */,
+				1B21137E290D55F800C1977D /* MainScreenView + Extensions.swift */,
+				1B211380290D590100C1977D /* EmployeeCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B21137B290D3C3300C1977D /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				1B21137C290D3C4A00C1977D /* NetworkService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +227,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B1076FE290D175700E19C6A /* ViewController.swift in Sources */,
+				1B21137D290D3C4A00C1977D /* NetworkService.swift in Sources */,
+				1B10771A290D1AC000E19C6A /* MainScreenRouter.swift in Sources */,
+				1B211383290D594100C1977D /* MainScreenView + SetupUI.swift in Sources */,
+				1B10771C290D1B3300E19C6A /* MainScreenPresenter.swift in Sources */,
+				1B1076FE290D175700E19C6A /* MainScreenView.swift in Sources */,
 				1B1076FA290D175700E19C6A /* AppDelegate.swift in Sources */,
+				1B107718290D19A100E19C6A /* MainScreenInteractor.swift in Sources */,
+				1B211385290D6DBC00C1977D /* NetworkError.swift in Sources */,
+				1B107714290D187300E19C6A /* MainScreenModuleBuilder.swift in Sources */,
 				1B1076FC290D175700E19C6A /* SceneDelegate.swift in Sources */,
+				1B21137F290D55F800C1977D /* MainScreenView + Extensions.swift in Sources */,
+				1B211381290D590100C1977D /* EmployeeCell.swift in Sources */,
+				1B107716290D18B900E19C6A /* NavigationBuilder.swift in Sources */,
+				1B10771E290D209A00E19C6A /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +392,6 @@
 				INFOPLIST_FILE = "avito-test-task/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,6 +401,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "maslov.avito-test-task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,7 +422,6 @@
 				INFOPLIST_FILE = "avito-test-task/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,6 +431,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "maslov.avito-test-task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
