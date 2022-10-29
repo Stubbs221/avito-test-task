@@ -41,8 +41,8 @@ class MainScreenView: UIViewController, MainScreenViewInput {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(EmployeeCell.self, forCellReuseIdentifier: EmployeeCell.reuseIdentifier)
-//        tableView.separatorStyle = .none
-        
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor.hexStringToUIColor(hex: "fffcf2")
         tableView.delegate = self
         tableView.dataSource = self
         return tableView

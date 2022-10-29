@@ -30,6 +30,6 @@ extension MainScreenView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80 + CGFloat((self.companyData?.employees[indexPath.row].skills.count)!) * 30
+        return 90 + CGFloat((self.companyData?.employees[indexPath.row].skills.count)!) * 30
     }
 }
