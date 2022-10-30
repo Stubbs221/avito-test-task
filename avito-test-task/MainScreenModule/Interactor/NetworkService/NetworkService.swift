@@ -20,7 +20,10 @@ class NetworkService {
         }
         
         if let jsonData = JsonManager.shared.readJSON() {
-            completion(LoadingState.loaded(jsonData.company))
+            DispatchQueue.main.async {
+                completion(LoadingState.loaded(jsonData.company))
+
+            }
         } else {
             
 //      MARK: - Базовая имплементация CachePolicy не включает настройку expiration date, нужную по тз, поэтому реализовано кастомное кеширование
