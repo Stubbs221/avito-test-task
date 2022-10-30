@@ -11,6 +11,8 @@ protocol MainScreenInteractorInput {
     var output: MainScreenInteractorOutput? { get set }
     
     func fetchCompanyData()
+    
+    func clearCache()
 }
 
 protocol MainScreenInteractorOutput: AnyObject {
@@ -18,9 +20,13 @@ protocol MainScreenInteractorOutput: AnyObject {
 }
 
 final class MainScreenInteractor: MainScreenInteractorInput {
+    func clearCache() {
+        JsonManager.shared.deleteJSON()
+    }
+    
     
     func fetchCompanyData() {
-        NetworkService.downloadJSON() { loadingState in
+        NetworkService.shared.downloadJSON() { loadingState in
             self.output?.interactorDidFetchCompanyData(with: loadingState)
         }
     }

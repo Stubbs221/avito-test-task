@@ -8,8 +8,9 @@
 import Foundation
 
 enum LoadingState {
-    case idle, loading, loaded(Company), failure(Error)
+    case idle, loading, loaded(Company), failure(NetworkError)
 }
+
 
 struct FetchedData: Codable {
     var company: Company

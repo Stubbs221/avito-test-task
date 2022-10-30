@@ -75,7 +75,7 @@ class EmployeeCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.heightAnchor.constraint(equalToConstant: 30).isActive = true
         label.textColor = UIColor.hexStringToUIColor(hex: "403d39")
-
+        label.font = UIFont.systemFont(ofSize: 17, weight: .medium)
         label.text = skill
         return label
     }
@@ -87,15 +87,20 @@ class EmployeeCell: UITableViewCell {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.layer.cornerRadius = 10
         stackView.layer.borderColor = UIColor.hexStringToUIColor(hex: "ccc5b9").cgColor
-        stackView.layer.borderWidth = 2
+        stackView.layer.borderWidth = 1
         stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 0)
         stackView.isLayoutMarginsRelativeArrangement = true
         return stackView
     }
     
+    override func prepareForReuse() {
+        self.phoneNumberLabel.text = ""
+        self.phoneNumberLabel.text = ""
+        self.skillsStackView.removeFromSuperview()
+    }
     func configureCell(with data: Employee) {
         contentView.backgroundColor = UIColor.hexStringToUIColor(hex: "fffcf2")
-
+        
         var subviews: [UILabel] = []
 
         self.nameLabel.text = data.name
@@ -132,6 +137,6 @@ class EmployeeCell: UITableViewCell {
             skillsStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 10),
             skillsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             skillsStackView.topAnchor.constraint(equalTo: phoneNumberLabel.bottomAnchor),
-            skillsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)])
+            skillsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)])
     }
 }

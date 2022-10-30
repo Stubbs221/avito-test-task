@@ -27,15 +27,20 @@ final class MainScreenPresenter: MainScreenPresenterInput {
         self.interactor = interactor
         self.router = router
         
-        DispatchQueue.global(qos: .userInitiated).async {
-            interactor.fetchCompanyData()
-        }
+
     }
     
     
 }
 
 extension MainScreenPresenter: MainScreenViewOutput {
+    func userPressedGetDataButton() {
+        interactor.fetchCompanyData()
+    }
+    
+    func userPressedClearCacheButton() {
+        interactor.clearCache()
+    }
     
 }
 
@@ -43,7 +48,6 @@ extension MainScreenPresenter: MainScreenInteractorOutput {
     func interactorDidFetchCompanyData(with state: LoadingState) {
         switch state {
         case .loaded(let companyData):
-            
             self.view.companyData = Company(name: companyData.name, employees: companyData.employees.sorted {
                 $0.name > $1.name
             })

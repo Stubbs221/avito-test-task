@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainScreenModuleBuilder {
+class MainScreenModuleConfigurator {
     class func build(usingNavigationFactory factory: NavigationFactory) -> UIViewController {
         let view = MainScreenView()
         let interactor = MainScreenInteractor()

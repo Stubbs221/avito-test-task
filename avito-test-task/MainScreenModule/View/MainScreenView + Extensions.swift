@@ -24,12 +24,22 @@ extension MainScreenView: UITableViewDelegate, UITableViewDataSource {
         1
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let companyData = companyData else { return nil }
-        return companyData.name
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        guard let companyData = companyData else { return nil }
+//        return companyData.name
+//    }
+//
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100 + CGFloat((self.companyData?.employees[indexPath.row].skills.count)!) * 30
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90 + CGFloat((self.companyData?.employees[indexPath.row].skills.count)!) * 30
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: EmployeeSectionHeader.reuseIdentifier) as? EmployeeSectionHeader else { return UIView() }
+        header.headerLabel.text = self.companyData?.name
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
 }

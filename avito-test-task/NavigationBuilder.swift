@@ -16,10 +16,9 @@ class NavigationBuilder {
         navigationController.navigationBar.barStyle = .default
         let largeTextStyleAttributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.black]
-        navigationController.navigationBar.largeTitleTextAttributes = largeTextStyleAttributes
-        
-
-        
+//        navigationController.navigationBar.largeTitleTextAttributes = largeTextStyleAttributes
+        navigationController.modalPresentationCapturesStatusBarAppearance = true
+//        navigationController.preferredStatusBarStyle = .lightContent
         
         
         

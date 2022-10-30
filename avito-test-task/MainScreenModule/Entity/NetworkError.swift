@@ -12,3 +12,16 @@ enum NetworkError: Error {
     case connectionFailed
     case unableToDecodeData
 }
+
+extension NetworkError: CustomStringConvertible {
+    public var description: String {
+        switch self {
+        case .connectionFailed:
+            return "Waiting for Network"
+        case .invalidURL:
+            return "Invalire URL"
+        case .unableToDecodeData:
+            return "Wrong data type reveived"
+        }
+    }
+}
