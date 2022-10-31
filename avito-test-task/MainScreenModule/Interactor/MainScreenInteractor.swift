@@ -21,9 +21,9 @@ protocol MainScreenInteractorOutput: AnyObject {
 
 final class MainScreenInteractor: MainScreenInteractorInput {
     func clearCache() {
-        JsonManager.shared.deleteJSON()
+        UserDefaults.standard.removeObject(forKey: "expireAt")
+        URLCache.shared.removeAllCachedResponses()
     }
-    
     
     func fetchCompanyData() {
         NetworkService.shared.downloadJSON() { loadingState in

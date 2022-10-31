@@ -28,52 +28,18 @@ class MainScreenView: UIViewController, MainScreenViewInput {
     
     var companyData: Company? {
         didSet {
-            
-            activityIndicator.isHidden = true
-            errorDescriptionLabel.isHidden = true
-            employeesTableView.isHidden = false
-            employeesTableView.reloadData()
+            self.setCompanyData(with: self.companyData)
         }
     }
     
     var loadingState: LoadingState? {
         didSet {
             DispatchQueue.main.async {
-                switch self.loadingState {
-                case .loaded(let companyData):
-                   
-                    self.companyData = companyData
-                case .failure(let error):
-                    self.setupErrorUI(with: error)
-                    self.employeesTableView.isHidden = true
-                    self.activityIndicator.isHidden = true
-                    self.activityIndicator.stopAnimating()
-                    self.errorDescriptionLabel.text = error.description
-                    self.errorDescriptionLabel.isHidden = false
-                case .loading:
-                    self.employeesTableView.isHidden = true
-                    self.activityIndicator.isHidden = false
-                    self.errorDescriptionLabel.isHidden = true
-                    self.activityIndicator.startAnimating()
-                case .idle:
-                    self.employeesTableView.isHidden = true
-                    self.activityIndicator.isHidden = true
-                case .none:
-                    break
-                }
+                self.setLoadingState(with: self.loadingState)
             }
-            
         }
     }
     
-    func setupErrorUI(with: Error) {
-        
-    }
-    func setupLoadingUI() {
-        
-        
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,14 +49,6 @@ class MainScreenView: UIViewController, MainScreenViewInput {
         
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        setNeedsStatusBarAppearanceUpdate()
-//    }
-//
-//    override var preferredStatusBarStyle: UIStatusBarStyle {
-//        .darkContent
-//    }
     lazy var employeesTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -157,6 +115,19 @@ class MainScreenView: UIViewController, MainScreenViewInput {
         label.textColor = UIColor.hexStringToUIColor(hex: "403d39")
         label.isHidden = true
         label.numberOfLines = 3
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+        return label
+        
+    }()
+    
+    lazy var idleDescriptionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = UIColor.hexStringToUIColor(hex: "403d39")
+        label.isHidden = true
+        label.numberOfLines = 3
+        label.text = "Press 'Load data' button. \nCache expires automatically \nafter 1 hour."
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
         return label

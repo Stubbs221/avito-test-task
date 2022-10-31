@@ -24,11 +24,6 @@ extension MainScreenView: UITableViewDelegate, UITableViewDataSource {
         1
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        guard let companyData = companyData else { return nil }
-//        return companyData.name
-//    }
-//
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100 + CGFloat((self.companyData?.employees[indexPath.row].skills.count)!) * 30
     }

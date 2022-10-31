@@ -10,17 +10,19 @@ import UIKit
 extension MainScreenView {
     func setupUI() {
         view.backgroundColor = UIColor.hexStringToUIColor(hex: "ccc5b9")
-//        view.backgroundColor = UIColor.hexStringToUIColor(hex: "403d39")
         view.addSubview(employeesTableView)
         view.addSubview(getDataButton)
         view.addSubview(clearCacheButton)
         view.addSubview(activityIndicator)
         view.addSubview(errorDescriptionLabel)
+        view.addSubview(idleDescriptionLabel)
         
         NSLayoutConstraint.activate([
             activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)])
-        
+        NSLayoutConstraint.activate([
+            idleDescriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            idleDescriptionLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)])
         NSLayoutConstraint.activate([
             errorDescriptionLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             errorDescriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
@@ -48,11 +50,6 @@ extension MainScreenView {
 
     func setupNavigation() {
         navigationController?.navigationBar.topItem?.title = "Avito-test-task"
-//        navigationController?.navigationBar.backgroundColor = UIColor.hexStringToUIColor(hex: "252422")
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = UIColor.hexStringToUIColor(hex: "252422")
-//        navigationController?.navigationBar.standardAppearance = appearance
-//        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
 }
 
