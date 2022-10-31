@@ -9,13 +9,7 @@ import UIKit
 
 extension MainScreenView {
     
-    func setCompanyData(with data: Company?) {
-        idleDescriptionLabel.isHidden = true
-        activityIndicator.isHidden = true
-        errorDescriptionLabel.isHidden = true
-        employeesTableView.isHidden = false
-        employeesTableView.reloadData()
-    }
+    
     
     func setLoadingState(with loadingState: LoadingState?) {
         guard let loadingState = loadingState else { return }
@@ -41,6 +35,15 @@ extension MainScreenView {
             self.employeesTableView.isHidden = true
             self.activityIndicator.isHidden = true
         }
+    }
+    
+    func updateCompanyData(data: Company) {
+        self.companyData = data
+        employeesTableView.reloadData()
+        idleDescriptionLabel.isHidden = true
+        activityIndicator.isHidden = true
+        errorDescriptionLabel.isHidden = true
+        employeesTableView.isHidden = false
     }
     
     @objc func getDataButtonPressed() {

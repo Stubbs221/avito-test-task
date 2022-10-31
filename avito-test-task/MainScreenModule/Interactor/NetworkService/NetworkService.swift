@@ -21,7 +21,7 @@ class NetworkService {
         }
         
         if let cacheExpirationDate = UserDefaults.standard.object(forKey: "expireAt") as? Date {
-            print(cacheExpirationDate)
+            print("cacheExpirationDate \(cacheExpirationDate)")
             
             if Date.now >= cacheExpirationDate {
                 UserDefaults.standard.removeObject(forKey: "expireAt")
@@ -44,6 +44,7 @@ class NetworkService {
             
             if UserDefaults.standard.object(forKey: "expireAt") == nil {
                 let expirationDate = Date(timeIntervalSinceNow: 3600)
+                print("expirationDate \(expirationDate)")
                 UserDefaults.standard.set(expirationDate, forKey: "expireAt")
             }
             

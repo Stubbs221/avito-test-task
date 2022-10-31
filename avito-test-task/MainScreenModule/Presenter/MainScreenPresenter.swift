@@ -27,7 +27,7 @@ final class MainScreenPresenter: MainScreenPresenterInput {
         self.interactor = interactor
         self.router = router
         
-
+        
     }
     
     
@@ -48,9 +48,15 @@ extension MainScreenPresenter: MainScreenInteractorOutput {
     func interactorDidFetchCompanyData(with state: LoadingState) {
         switch state {
         case .loaded(let companyData):
-            self.view.companyData = Company(name: companyData.name, employees: companyData.employees.sorted {
-                $0.name > $1.name
-            })
+            
+            self.view.updateCompanyData(data: Company(
+                name: companyData.name,
+                employees: companyData.employees.sorted {
+                    $0.name > $1.name
+                }
+            )
+            )
+            
         default:
             self.view.loadingState = state
         }

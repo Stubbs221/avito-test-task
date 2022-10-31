@@ -12,7 +12,11 @@ protocol MainScreenViewInput: AnyObject {
     
     var companyData: Company? { get set }
     
+    
     var loadingState: LoadingState? { get set }
+    
+    func updateCompanyData(data: Company)
+
 }
 
 protocol MainScreenViewOutput {
@@ -26,11 +30,7 @@ class MainScreenView: UIViewController, MainScreenViewInput {
 
     var output: MainScreenViewOutput?
     
-    var companyData: Company? {
-        didSet {
-            self.setCompanyData(with: self.companyData)
-        }
-    }
+    var companyData: Company? 
     
     var loadingState: LoadingState? {
         didSet {
