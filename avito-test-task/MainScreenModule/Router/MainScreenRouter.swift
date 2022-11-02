@@ -13,6 +13,4 @@ protocol MainScreenRouterInput {
 
 final class MainScreenRouter: MainScreenRouterInput {
     weak var rootVC: MainScreenView?
-    
-   
 }

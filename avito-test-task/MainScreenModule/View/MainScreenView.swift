@@ -9,12 +9,8 @@ import UIKit
 
 protocol MainScreenViewInput: AnyObject {
     var output: MainScreenViewOutput? { get set }
-    
     var companyData: Company? { get set }
-    
-    
     var loadingState: LoadingState? { get set }
-    
     func updateCompanyData(data: Company)
 
 }
@@ -25,11 +21,7 @@ protocol MainScreenViewOutput {
 }
 
 class MainScreenView: UIViewController, MainScreenViewInput {
-    
-    
-
     var output: MainScreenViewOutput?
-    
     var companyData: Company? 
     
     var loadingState: LoadingState? {
@@ -39,7 +31,6 @@ class MainScreenView: UIViewController, MainScreenViewInput {
             }
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,7 +109,6 @@ class MainScreenView: UIViewController, MainScreenViewInput {
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
         return label
-        
     }()
     
     lazy var idleDescriptionLabel: UILabel = {
@@ -131,7 +121,6 @@ class MainScreenView: UIViewController, MainScreenViewInput {
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
         return label
-        
     }()
 }
 

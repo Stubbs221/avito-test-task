@@ -20,6 +20,7 @@ class NetworkService {
             return
         }
         
+//      check if it's time to clear cache
         if let cacheExpirationDate = UserDefaults.standard.object(forKey: "expireAt") as? Date {
             print("cacheExpirationDate \(cacheExpirationDate)")
             
@@ -37,6 +38,7 @@ class NetworkService {
                 completion(LoadingState.failure(NetworkError.connectionFailed))
                 return
             }
+            
             guard let fetchedData = try? JSONDecoder().decode(FetchedData.self, from: data) else {
                 completion(LoadingState.failure(NetworkError.unableToDecodeData))
                 return

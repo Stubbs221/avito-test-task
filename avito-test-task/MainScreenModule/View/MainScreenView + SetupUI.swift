@@ -10,6 +10,7 @@ import UIKit
 extension MainScreenView {
     func setupUI() {
         view.backgroundColor = UIColor.hexStringToUIColor(hex: "ccc5b9")
+        
         view.addSubview(employeesTableView)
         view.addSubview(getDataButton)
         view.addSubview(clearCacheButton)
@@ -32,19 +33,16 @@ extension MainScreenView {
             employeesTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             employeesTableView.topAnchor.constraint(equalTo: view.topAnchor),
             employeesTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
-        
         NSLayoutConstraint.activate([
             getDataButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             getDataButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -(UIScreen.main.bounds.width / 2) - 10 ),
             getDataButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80),
             getDataButton.heightAnchor.constraint(equalToConstant: 60)])
-        
         NSLayoutConstraint.activate([
             clearCacheButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             clearCacheButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant:  (UIScreen.main.bounds.width / 2) + 10 ),
             clearCacheButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80),
             clearCacheButton.heightAnchor.constraint(equalToConstant: 60)])
-        
     }
     
 

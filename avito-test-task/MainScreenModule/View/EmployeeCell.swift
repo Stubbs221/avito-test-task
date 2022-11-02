@@ -8,7 +8,6 @@
 import UIKit
 
 class EmployeeCell: UITableViewCell {
-
     static let reuseIdentifier = "Cell"
     
     override func awakeFromNib() {
@@ -34,7 +33,6 @@ class EmployeeCell: UITableViewCell {
         label.textColor = UIColor.hexStringToUIColor(hex: "403d39")
         label.text = "Phone number:"
         label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
-
         return label
     }()
     
@@ -42,9 +40,7 @@ class EmployeeCell: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.hexStringToUIColor(hex: "252422")
-
         label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
-
         return label
     }()
     
@@ -53,7 +49,6 @@ class EmployeeCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         label.textColor = UIColor.hexStringToUIColor(hex: "252422")
-
         return label
     }()
     
@@ -95,6 +90,7 @@ class EmployeeCell: UITableViewCell {
         self.phoneNumberLabel.text = ""
         self.skillsStackView.removeFromSuperview()
     }
+    
     func configureCell(with data: Employee) {
         contentView.backgroundColor = UIColor.hexStringToUIColor(hex: "fffcf2")
         
@@ -106,6 +102,7 @@ class EmployeeCell: UITableViewCell {
         for skill in data.skills {
             subviews.append(makeSkillLabel(with: skill))
         }
+        
         self.skillsStackView = makeStackView(with: subviews)
         
         contentView.addSubview(nameTitleLabel)

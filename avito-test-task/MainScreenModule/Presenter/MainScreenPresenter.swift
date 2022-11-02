@@ -48,15 +48,12 @@ extension MainScreenPresenter: MainScreenInteractorOutput {
     func interactorDidFetchCompanyData(with state: LoadingState) {
         switch state {
         case .loaded(let companyData):
-            
             self.view.updateCompanyData(data: Company(
                 name: companyData.name,
                 employees: companyData.employees.sorted {
                     $0.name > $1.name
-                }
+                })
             )
-            )
-            
         default:
             self.view.loadingState = state
         }
