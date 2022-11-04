@@ -117,7 +117,7 @@ class MainScreenView: UIViewController, MainScreenViewInput {
         label.textColor = UIColor.hexStringToUIColor(hex: "403d39")
         label.isHidden = true
         label.numberOfLines = 3
-        label.text = "Press 'Load data' button. \nCache expires automatically \nin 1 hour."
+        label.text = "Press 'Load data' button. \nCache expires automatically \nin 1 hour.\nAlso you can do it manually by pressing 'Clear cache' button"
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
         return label
