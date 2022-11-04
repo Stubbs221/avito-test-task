@@ -23,6 +23,8 @@ extension MainScreenView {
             activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)])
         NSLayoutConstraint.activate([
             idleDescriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            idleDescriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 20),
+            idleDescriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             idleDescriptionLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)])
         NSLayoutConstraint.activate([
             errorDescriptionLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
