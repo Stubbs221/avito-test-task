@@ -26,7 +26,8 @@ final class MainScreenInteractor: MainScreenInteractorInput {
     }
     
     func fetchCompanyData() {
-        NetworkService.shared.downloadJSON() { loadingState in
+        NetworkService.shared.downloadJSON() { [ weak self ] loadingState in
+            guard let self = self else { return }
             self.output?.interactorDidFetchCompanyData(with: loadingState)
         }
     }

@@ -18,7 +18,7 @@ class EmployeeCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    lazy var nameTitleLabel: UILabel = {
+    private lazy var nameTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Name:"
@@ -27,7 +27,7 @@ class EmployeeCell: UITableViewCell {
         return label
     }()
     
-    lazy var phoneNumberTitleLabel: UILabel = {
+    private lazy var phoneNumberTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.hexStringToUIColor(hex: "403d39")
@@ -36,7 +36,7 @@ class EmployeeCell: UITableViewCell {
         return label
     }()
     
-    lazy var nameLabel: UILabel = {
+    private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.hexStringToUIColor(hex: "252422")
@@ -44,7 +44,7 @@ class EmployeeCell: UITableViewCell {
         return label
     }()
     
-    lazy var phoneNumberLabel: UILabel = {
+    private lazy var phoneNumberLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
@@ -52,7 +52,7 @@ class EmployeeCell: UITableViewCell {
         return label
     }()
     
-    lazy var employeesSkills: UILabel = {
+    private lazy var employeesSkills: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
@@ -60,7 +60,7 @@ class EmployeeCell: UITableViewCell {
         return label
     }()
     
-    var skillsStackView: UIStackView!
+    private var skillsStackView: UIStackView!
     
     private func makeSkillLabel(with skill: String) -> UILabel {
         let label = UILabel()
@@ -105,6 +105,10 @@ class EmployeeCell: UITableViewCell {
         
         self.skillsStackView = makeStackView(with: subviews)
         
+        
+    }
+    
+    private func setupUI() {
         contentView.addSubview(nameTitleLabel)
         contentView.addSubview(nameLabel)
         contentView.addSubview(phoneNumberTitleLabel)
